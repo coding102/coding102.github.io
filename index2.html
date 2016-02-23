@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    
+    <!--  div video  -->
+    <script type="text/javascript" src="js_s/libs/jquery-1.6.2.min.js"></script> 
+		  <script type="text/javascript" src="js_s/libs/swfobject.js"></script> 
+		  <script type="text/javascript" src="js_s/libs/modernizr.video.js"></script> 
+		  <script type="text/javascript" src="js_s/video_background.js"></script> 
 </head>
 
 <body>
@@ -33,30 +39,30 @@
     </nav>
 
     <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br>
-                <br>
-                <h1 class="header center teal-text text-lighten-2">Mark Morales-Lopez </h1>
-                <div class="row center">
-                    <h5 class="header col s12 light"></h5>
-                </div>
-                <!--
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div>
--->
-                <br>
-                <br>
-
-            </div>
-
-        </div>
-
         <div class="parallax">
-            <img src="desk.jpeg" alt="Unsplashed background img 1">
+            <img src="desk.jpeg">
         </div>
     </div>
+    
+    
+<script>
+			jQuery(document).ready(function($) {
+				var Video_back = new video_background($("#index-banner"), { 
+					"position": "absolute",	//Stick within the div
+					"z-index": "-1",		//Behind everything
+
+					"loop": true, 			//Loop when it reaches the end
+					"autoplay": true,		//Autoplay at start
+					"muted": true,			//Muted at start
+
+					"youtube": "M0e_4WzY3_o",	//Youtube video id
+					"start": 0,					//Start with 6 seconds offset (to pass the introduction in this case for example)
+					"video_ratio": 1.7778, 		// width/height -> If none provided sizing of the video is set to adjust
+
+					"fallback_image": "videos/main.jpg",	//Fallback image path
+				});
+			});
+</script>
 
 
     <div class="container">
