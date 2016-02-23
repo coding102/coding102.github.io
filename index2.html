@@ -39,32 +39,9 @@
     </nav>
 
     <div id="index-banner" class="parallax-container">
-        <div class="parallax">
-            <img src="desk.jpeg">
-        </div>
+        <h1 class="header center purple-text accent-3"> <span class="rotate">Applications, & ,Designs</span></h1>
     </div>
     
-    
-<script>
-			jQuery(document).ready(function($) {
-				var Video_back = new video_background($("#index-banner"), { 
-					"position": "absolute",	//Stick within the div
-					"z-index": "-1",		//Behind everything
-
-					"loop": true, 			//Loop when it reaches the end
-					"autoplay": true,		//Autoplay at start
-					"muted": true,			//Muted at start
-
-					"youtube": "M0e_4WzY3_o",	//Youtube video id
-					"start": 0,					//Start with 6 seconds offset (to pass the introduction in this case for example)
-					"video_ratio": 1.7778, 		// width/height -> If none provided sizing of the video is set to adjust
-
-					"fallback_image": "videos/main.jpg",	//Fallback image path
-				});
-			});
-</script>
-
-
     <div class="container">
         <div class="section">
 
@@ -146,9 +123,6 @@
                 <h5 class="white-text">Used to build this site</h5>
                 <h6 class="white-text">HTML5 , CSS , Materialize Grid , Materialize Fonts , Materialize Icons , Materialize Parallax , Git , Github , Unsplash Images </h6>
 
-
-
-
             </div>
         </div>
         <div class="footer-copyright">
@@ -161,10 +135,50 @@
 
 
     <!--  Scripts-->
+    
+    <!--  Materialize  -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    
+    <!--  div video  -->
+    <script type="text/javascript" src="js_s/libs/jquery-1.6.2.min.js"></script> 
+		  <script type="text/javascript" src="js_s/libs/swfobject.js"></script> 
+		  <script type="text/javascript" src="js_s/libs/modernizr.video.js"></script> 
+		  <script type="text/javascript" src="js_s/video_background.js"></script>
+    
+    <!--  textrotator  -->
+    <script type="text/javascript" src="js_s/jquery.simple-text-rotator.js"></script>
+    
+    <!--  video script for div  -->   
+    <script>
+        jQuery(document).ready(function($) {
+				        var Video_back = new video_background($("#index-banner"), { 
+					           "position": "absolute",	//Stick within the div
+					           "z-index": "-1",		//Behind everything
 
+					           "loop": true, 			//Loop when it reaches the end
+					           "autoplay": true,		//Autoplay at start
+					           "muted": true,			//Muted at start
+
+					           "youtube": "M0e_4WzY3_o",	//Youtube video id
+					           "start": 0,					//Start with 6 seconds offset (to pass the introduction in this case for example)
+					           "video_ratio": 1.7778, 		// width/height -> If none provided sizing of the video is set to adjust
+
+					           "fallback_image": "desk.jpg",	//Fallback image path
+				        });
+			     });
+    </script>
+    
+    <script>
+        $(".rotate").textrotator({
+            animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+            separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+            speed: 2000 // How many milliseconds until the next word show.
+});
+    </script>
+    
+    
 </body>
 
 </html>
